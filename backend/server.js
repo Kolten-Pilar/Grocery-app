@@ -5,8 +5,13 @@ const port = process.env.PORT || 5000; //port
 
 const app = express(); 
 
+//Routes
 app.get('/api/users', (req, res) => {
   res.json({message: 'Get Users'});
+})
+
+app.get('/api/items', (req, res) => {
+  res.json({message: 'Get Items'});
 })
 
 app.listen(port, () => {
