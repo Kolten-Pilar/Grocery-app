@@ -1,8 +1,13 @@
 //Imports
+const path = require('path'); //path module
 const express = require('express'); //backend framework
 const dotenv = require('dotenv').config(); //environment variables
+const colors = require('colors'); //colors for console
 const port = process.env.PORT || 5000; //port
 const {errorHandler} = require('./middleware/errorMiddleware'); //error handler
+const connectDB = require('./config/db'); //database connection
+
+connectDB(); //connect to database
 
 const app = express(); 
 
