@@ -5,7 +5,7 @@ const itemSchema = mongoose.Schema(
     user: {
       type: mongoose.Schema.Types.ObjectId, //user id
       required: true,
-      ref: "User", //reference to User model
+      ref: 'User', //reference to User model
     },
     text: {
       type: String,
