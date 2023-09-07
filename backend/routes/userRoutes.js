@@ -1,20 +1,14 @@
 //Imports
 const express = require('express');
 const router = express.Router();
-const {} = require('../controllers/userController'); //import user controller
+const { getMe, registerUser, loginUser } = require('../controllers/userController'); //import user controller
 const {protect} = require('../middleware/authMiddleware'); //import protect middleware
 
 //Create user Routes
-router.get('/', (req, res) => {
-  res.json({message: 'Get Users'});
-})
+router.get('/me', protect, getMe);
 
-router.post('/', (req, res) => {
-  res.json({message: 'Create User'});
-});
+router.post('/', registerUser);
 
-router.post('/login', (req, res) => {
-  res.json({message: 'Login User'});
-});
+router.post('/login', loginUser);
 
 module.exports = router; //export router
