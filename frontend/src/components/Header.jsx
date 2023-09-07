@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
+import { FaDoorClosed, FaUserSlash, FaUser, FaUserPlus } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
 
@@ -16,19 +16,19 @@ function Header() {
         {/* {user ? ( */}
            <li className=" ml-5">
              <button className=" text-white font-semibold flex items-center justify-center" >
-               <FaSignOutAlt /> Logout
+               <FaUserSlash /> Logout
              </button>
            </li>
         {/* ) : ( */}
           <>
             <li className=" ml-5 py-4">
               <Link to="/login" className="flex items-center">
-                <FaSignInAlt /> Login
+                <FaUser /> Login
               </Link>
             </li>
             <li className=" ml-5 py-4">
               <Link to="/register" className="flex items-center">
-                <FaUser /> Register
+                <FaUserPlus /> Register
               </Link>
             </li>
           </>
