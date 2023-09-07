@@ -1,5 +1,11 @@
 import { useState } from 'react'
-import viteLogo from '/vite.svg'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import Header from './components/Header'
+import Dashboard from './pages/Dashboard'
+import Login from './pages/Login'
+import Register from './pages/Register'
+
 
 
 function App() {
@@ -7,8 +13,18 @@ function App() {
 
   return (
     <>
-      <h1 className='fixed p-2 z-10 right-20 top-4 bg-violet-300 dark:bg-orange-300 text-lg rounded-md'>hello world</h1>
-      <h2 className='text-xl rounded-lg bg-red-500 text-center justify-center'>hello</h2>
+      <Router>
+        <div className='w-full text-center mt-auto pt-4'>
+          <Header />
+          {/* Routes */}
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+          </Routes>
+        </div>
+      </Router>
+      <ToastContainer />
     </>
   )
 }
