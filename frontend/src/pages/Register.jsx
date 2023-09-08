@@ -31,7 +31,7 @@ function Register() {
         <h1 className=' font-bold mb-6'>
           <FaUserPlus className=' m-auto'/> Register
         </h1>
-        <p className=' text-slate-500'>Please create an account</p>
+        <p className=' text-slate-500 text-4xl'>Please create an account</p>
       </section>
       {/* form */}
       <section className=' w-2/3 m-auto'> 
