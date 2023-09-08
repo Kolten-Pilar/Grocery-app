@@ -30,21 +30,9 @@ function Footer() {
               });
             }}
           >
-            {" "}
-            <FaArrowAltCircleUp /> Back to Top{" "}
+            <FaArrowAltCircleUp /> Back to Top
           </Link>
         </li>
-
-        {/* <li className=" ml-5 py-4">
-              <Link to="/login" className="flex items-center">
-                <FaUser /> Login
-              </Link>
-            </li>
-            <li className=" ml-5 py-4">
-              <Link to="/register" className="flex items-center">
-                <FaUserPlus /> Register
-              </Link>
-            </li> */}
       </ul>
     </footer>
   );
