@@ -13,6 +13,17 @@ function Register() {
 
   const { name, email, password, password2 } = formData // Destructure formData into individual variables
 
+  const onChange = (e) => { // onChange function to update state as user types into form
+    setFormData((prevState) => ({
+        ...prevState,
+        [e.target.name] : e.target.value
+    }))
+  } 
+
+  const onSubmit = (e) => { // onSubmit function to send form data to backend
+    e.preventDefault()
+  }
+
   return (
     <>
     {/* heading */}
@@ -24,7 +35,7 @@ function Register() {
       </section>
       {/* form */}
       <section className=' w-2/3 m-auto'> 
-        <form >
+        <form onSubmit={onSubmit} >
           <div className=' mb-3'>
             <input
               type='text'
@@ -33,7 +44,7 @@ function Register() {
               name='name'
               value={name}
               placeholder='Enter your name'
-              // onChange={onChange}
+              onChange={onChange}
             />
           </div>
           <div className=' mb-3'>
@@ -44,7 +55,7 @@ function Register() {
               name='email'
               value={email}
               placeholder='Enter your email'
-              // onChange={onChange}
+              onChange={onChange}
             />
           </div>
           <div className=' mb-3'>
@@ -55,7 +66,7 @@ function Register() {
               name='password'
               value={password}
               placeholder='Enter your password'
-              // onChange={onChange}
+              onChange={onChange}
             />
           </div>
           <div className='mb-3'>
@@ -66,7 +77,7 @@ function Register() {
               name='password2'
               value={password2}
               placeholder='Confirm password'
-              // onChange={onChange}
+              onChange={onChange}
             />
           </div>
           <div className=" mb-3 flex items-center justify-center">
