@@ -59,7 +59,7 @@ function Login() {
           </div>
           
           <div className=" mb-3 flex items-center justify-center">
-            <button type='submit' className=" px-3 py-5 border-2 border-black rounded-xl bg-black text-white font-bold cursor-pointer w-1/2">Submit</button>
+            <button type='submit' className=" px-3 py-5 border-2 border-black rounded-xl bg-blue-700 text-white font-bold cursor-pointer w-1/2">Submit</button>
           </div>
         </form>
       </section>
