@@ -31,7 +31,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Unsolved Problems:
-- On the register and login page, the icons are above the words 'login' and 'register' instead of next to them.
+- On the register and login page, the icons are above the words 'login' and 'register' instead of next to them. I tried using flexbox / justify-center / items-center to fix this but it didn't work. I suspect that it is either the way I'm nesting the divs or the way I'm using tailwind classes.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
