@@ -7,7 +7,7 @@ const User = require('../models/userModel'); //import User model
 // @route   GET /api/items
 // @access  Private
 const getItems = asyncHandler(async (req, res) => {
-  const items = await Item.find(); //find all items
+  const items = await Item.find({user: req.user.id}); //find all items
 
   res.status(200).json(items);
 });
