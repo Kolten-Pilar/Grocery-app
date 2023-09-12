@@ -48,6 +48,23 @@ export const getItems = createAsyncThunk(
 );
 
 //update user item
+export const updateItem = createAsyncThunk(
+  "items/update",
+  async ({text, id}, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user.token;
+      return await itemService.updateItem(id, text, token);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
 
 
 //delete user item
@@ -104,6 +121,24 @@ export const itemSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
+      })
+      .addCase(updateItem.pending, (state) => {
+        state.isLoading = true
+      })
+      .addCase(updateItem.fulfilled, (state, action) => {
+        state.isLoading = false
+        state.isSuccess = true
+        const updatedItemIndex = state.items.findIndex(
+          (item) => item._id === action.payload._id
+        );
+        if (updatedItemIndex !== -1) {
+          state.items[updatedItemIndex].text = action.payload.text;
+        }
+      })
+      .addCase(updateItem.rejected, (state, action) => {
+        state.isLoading = false
+        state.isError = true
+        state.message = action.payload
       })
       .addCase(deleteItem.pending, (state) => {
         state.isLoading = true

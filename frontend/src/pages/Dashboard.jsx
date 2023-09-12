@@ -23,7 +23,7 @@ function Dashboard() {
     }
 
     if (isError) {
-      console.log("Error");
+      console.log(message);
     }
 
     return () => {
