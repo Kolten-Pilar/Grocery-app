@@ -68,9 +68,9 @@ function Dashboard() {
 
       <ItemForm />
 
-      <section className="content">
+      <section className=" w-4/5 m-auto">
         {items.length > 0 ? (
-          <div className="goals">
+          <div className=" grid grid-cols-2 gap-3">
             {items.map((item) => (
               <GroceryItem key={item._id} item={item} />
             ))} 

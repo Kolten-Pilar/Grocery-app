@@ -23,9 +23,10 @@ function ItemForm() {
           <label htmlFor="text">Item</label>
           <input
             type="text"
-            className=' w-full p-3 border-2 border-black rounded-xl mb-3'
+            className=' w-full p-3 border-2 border-black rounded-xl mb-3 text-center'
             name="text"
             id="text"
+            placeholder="Add an Item"
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
