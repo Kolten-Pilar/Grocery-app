@@ -14,9 +14,10 @@
 
 - The user can click the "Delete" button to delete the item from the list.
 
-![](Delete-demo.mp4)
-
 - The app can keep track of multiple users and their grocery lists with authentication/login.
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+
 - The app is based on the MERN practice project I completed during the PerScholas training program.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -45,7 +46,10 @@
 
 ## Unsolved Problems:
 - On the register and login page, the icons are above the words 'login' and 'register' instead of next to them. I tried using flexbox / justify-center / items-center to fix this but it didn't work. I suspect that it is either the way I'm nesting the divs or the way I'm using tailwind classes.
+- I tried to add a video to the readme but cannot figure out how to do so
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Future Enhancements:
+- I would like to add a feature that allows users to check off items on their list as they shop instead of just deleting.
+- I would like to add a 3rd party API that allows users to see an image of whatever item they add to their list.
