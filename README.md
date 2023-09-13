@@ -2,8 +2,10 @@
 # PerScholas / Project 3
 ## Description/Introduction:
 - This is a simple grocery list app that allows users to add, edit, see all list items, and delete items from their grocery list.
-![image](![Alt text](image.png))
+(![Alt text](image.png))
 - The user can type in the name of the item they want to add to the list, and click the "Add Item" button to add it to the list.
+![Alt text](image-1.png)
+![Alt text](image-2.png)
 - The user can click the "Edit" button to edit the name of the item and they can click the "Delete" button to delete the item from the list.
 - The app can keep track of multiple users and their grocery lists with authentication/login.
 - The app is based on the MERN practice project I completed during the PerScholas training program.
