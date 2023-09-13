@@ -40,7 +40,7 @@
 - Below are my planning documents for this project:
 - https://trello.com/invite/b/srzka2mv/ATTI2d494ad42022deae201dc15dca8436efA0EB1599/mod-3-project
 - ERD: https://lucid.app/lucidchart/4b85acb0-119d-4713-8e09-62a7dd5a8040/edit?beaconFlowId=3AE5B0EC41E5B5B9&invitationId=inv_c2fdc1ed-4ffb-4e46-8afe-07b6d31847c7&page=0_0#
-- *Link to deployed app when live*
+- https://grocery-app-kolten-p-cf1292b75832.herokuapp.com/login
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
