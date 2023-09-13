@@ -13,6 +13,7 @@
 ![Alt text](image-4.png)
 
 - The user can click the "Delete" button to delete the item from the list.
+![Alt text](readmemern.gif)
 
 - The app can keep track of multiple users and their grocery lists with authentication/login.
 ![Alt text](image-5.png)
