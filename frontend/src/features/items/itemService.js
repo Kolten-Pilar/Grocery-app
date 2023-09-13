@@ -30,9 +30,7 @@ const getItems = async (token) => {
 
 //Update user item
 const updateItem = async (itemId, updatedText, token) => {
-  token = token || JSON.parse(localStorage.getItem('user')).token;
-  console.log(itemId);
-
+  
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,

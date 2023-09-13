@@ -16,6 +16,10 @@ function GroceryItem({item}) {
     dispatch(updateItem({ text: editedText, id: item._id })) // dispatch updateItem action
     setIsEditing(false) // set isEditing to false after dispatching updateItem
   } 
+  
+  const handleDelete = () => { // function to handle deleting
+    dispatch(deleteItem(item._id))
+  }
 
   return (
     <div className=" relative border-2 border-black rounded-xl bg-blue-700 text-white text-2xl font-semibold py-2">
@@ -36,8 +40,13 @@ function GroceryItem({item}) {
        <div>
         {new Date(item.createdAt).toLocaleString('en-us')}
       </div>
+      {item.updatedAt && (
+        <div className=' text-sm'>
+          Updated: {new Date(item.updatedAt).toLocaleString('en-us')}
+        </div>
+      )}
       <h2>{item.text}</h2>
-      <button onClick={() => dispatch(deleteItem(item._id))} className=" absolute top-0 right-4">X</button> 
+      <button onClick={handleDelete} className=" absolute top-0 right-4">X</button> 
       <button onClick={handleEdit} className=" absolute top-0 left-2">Edit</button>
       </>
       )}

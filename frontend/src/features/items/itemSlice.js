@@ -128,11 +128,12 @@ export const itemSlice = createSlice({
       .addCase(updateItem.fulfilled, (state, action) => {
         state.isLoading = false
         state.isSuccess = true
-        const updatedItemIndex = state.items.findIndex(
+        const updatedItemIndex = state.items.findIndex( //This is a method that returns the index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned. This is the index of the item we want to update and is what fixes the bug of the item not updating on the frontend.
           (item) => item._id === action.payload._id
         );
         if (updatedItemIndex !== -1) {
           state.items[updatedItemIndex].text = action.payload.text;
+          state.items[updatedItemIndex].updatedAt = action.payload.updatedAt; // allows us to see when the item was updated
         }
       })
       .addCase(updateItem.rejected, (state, action) => {

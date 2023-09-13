@@ -18,7 +18,7 @@ function Footer() {
   };
 
   return (
-    <footer className="flex justify-between items-center pr-5 mt-14 border-2 border-black rounded-xl bg-blue-700 text-white font-semibold">
+    <footer className="flex justify-between items-center pr-5 mt-14 mb-3 border-2 border-black rounded-xl bg-blue-700 text-white font-semibold">
       <div className=" pl-3">
         <Link to="/" className="flex items-center">
           Grocery List
