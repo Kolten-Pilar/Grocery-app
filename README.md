@@ -14,8 +14,10 @@
 
 - The user can click the "Delete" button to delete the item from the list.
 
- C:\Users\kp\Desktop\SE_Curriculum\Module_3\Project-3\Grocery-App\Grocery List App - Google Chrome 2023-09-13 13-26-00.mp4
-
+<video width='320' height='240' controls>
+ <source src='C:\Users\kp\Desktop\SE_Curriculum\Module_3\Project-3\Grocery-App\Delete-demo.mp4' type='video/mp4'>
+</video>
+ 
 - The app can keep track of multiple users and their grocery lists with authentication/login.
 - The app is based on the MERN practice project I completed during the PerScholas training program.
 
